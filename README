@@ -1,0 +1,83 @@
+Setup new github+gitflow repo
+
+  Config global git settings
+
+    git config --global user.name "Your Name"
+    git config --global user.email name@host.com
+
+  Create local repo
+
+    mkdir <reponame>
+    cd <reponame>
+    git init
+    touch README
+    git add README
+    git commit -m 'initial commit'
+ 
+  
+  Init gitflow
+
+    git flow init
+
+  Update github
+
+    git remote add origin git@github.com:<githubuser>/<reponame>.git
+    git push --all -u
+
+----------------------------------------
+
+Updatating (local -> github)
+
+  push (all) changes/branches:
+
+    git push --all -u
+
+  push single branch:
+
+    git push -u <branchname>
+
+
+Updating (github -> local)
+
+  ..
+  ..
+  ..
+
+----------------------------------------
+
+Basic gitflow commands:
+
+  Features:
+
+    git flow feature start <featurename>
+    .. (do your work)
+    .. (add files with 'git add <file>')
+    git commit -m "commit message"
+    .. (do further work/commits)
+    git flow feature finish <featurename>
+
+  Realeses:
+
+    git flow release start <releasename>
+    .. (do your work)
+    .. (add files with 'git add <file>')
+    git commit -m "commit message"
+    .. (do further work/commits)
+    git flow release finish <releasename>
+
+  Hotfixes:
+
+    git flow hotfix start <hotfixname>
+    .. (do your work)
+    .. (add files with 'git add <file>')
+    git commit -m "commit message"
+    .. (do further work/commits)
+    git flow hotfix finish <hotfixname>
+
+  Supports:
+
+    git flow support start <supportname>
+    .. (do your work)
+    .. (add files with 'git add <file>')
+    git commit -m "commit message"
+    .. (do further work/commits)
